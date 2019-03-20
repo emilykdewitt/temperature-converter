@@ -3,30 +3,35 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
   };
 
+const toCelsius = (temp) => {
+  return (temp - 32) * (5/9);
+};
+
+const toFahrenheit = (temp) => {
+  return (temp * (9/5)) + 32;
+};
+
 const determineConverter = () => {
     let domString = ``;
+    const temp = document.getElementById('tempInput').value;
     if (document.getElementById('celsius').checked) {
         tempType = document.getElementById('celsius').value;
+        newTemp = toFahrenheit(temp);
+        domString += `${newTemp} degrees F`
       }
     else if (document.getElementById('fahrenheit').checked) {
         tempType = document.getElementById('fahrenheit').value;
+        newTemp = toCelsius(temp);
+        domString += `<h2>${newTemp} degrees C`;
     }
-    const tempValue = document.getElementById('tempInput').value;
-    console.log(document.getElementById('tempInput').value);
-    console.log(tempType);
-    domString += `<div class="tempOutputBox">`
-    domString +=    `<h5>${tempValue}</h5>`;
-    domString +=    `<h5>${tempType}</h5>`;
-    domString += `</div>`
     printToDom('tempOutput', domString);
  };
 
- /*determineConverter function should console.log value in input and should console.log either C or F depending on which radio button is selected, print the tempInput value to the output div
-Write a printToDom function - 2 inputs - divId and textToPrint
-*/
+ const buttonEvents = () => {
+  document.getElementById(`convertBtn`).addEventListener('click', determineConverter);
 
 const init = () => {
-     determineConverter();
+  buttonEvents();
  };
 
  init();

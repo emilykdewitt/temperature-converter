@@ -10,19 +10,19 @@
 <body>
     <form>
         <div class="tempConverterForm">
-        
-            <label for="id">Temperature</label>
-            <input id="tempInput" name="tempInput" />
-            <form>
-                <input type="radio" name="tempType" id="celsius" value="C" checked> Celsius
-                <input type="radio" name="tempType" id="fahrenheit" value="F">Fahrenheit
-            </form>
-            <input type="reset" value="Clear">
-            <button id="convertBtn">Convert</button>
-            <div id="tempOutput"></div>        
+            <h3>Temperature to Convert:</h3>
+            <input id="tempInput" name="tempInput">
+        </div>
+        <div class="radio-buttons"></div>
+            <input type="radio" name="tempType" id="celsius" value="C"> Celsius
+            <input type="radio" name="tempType" id="fahrenheit" value="F">Fahrenheit
         </div>
     </form>
-
+        <div class="action-buttons">
+            <input type="reset" value="Clear">
+            <button id="convertBtn">Convert</button>
+            <div id="tempOutput" class="output-temp"></div>        
+        </div>
     <script src="./main.js"></script>
 </body>
 </html>
