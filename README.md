@@ -9,7 +9,7 @@ This app allows the user to enter a temperature in Celsius or Fahrenheit and con
 -  JavaScript
 
 ## Screenshot
-![Screenshot of Converter](https://raw.githubusercontent.com/emilykdewitt/temperature-converter/master/screenshot.png)
+![Screenshot of Converter](https://raw.githubusercontent.com/emilykdewitt/temperature-converter/master/screenshot.png)  
 
 ## How to Run
 1. Go to: `https://www.npmjs.com/package/http-server` and install "http-server".  
