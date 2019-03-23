@@ -1,9 +1,55 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
 body {
     background-color: lightcyan;
 }
 
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.radio-buttons > input {
+    margin: 0;
+}
+.action-buttons {
+    padding-top: 50px;
+}
+.action-buttons > button {
+    width: 65px;
+    height: 45px;
+    border-radius: 5%;
+    margin: 10px;
+}
+
+#tempInput {
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: 2px black solid;
+}
+
 .output-temp {
-    width: 70px;
-    height: 70px;
-    border: 2px solid purple;
+    width: 250px;
+    height: 40px;
+    border: 2px black solid;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.tempConverterForm, .tempResults {
+    margin-top: 40px;
 }
