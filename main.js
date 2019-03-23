@@ -69,7 +69,7 @@ const keypress = () => {
  const buttonEvents = () => {
   document.getElementById(`convertBtn`).addEventListener('click', determineConverter);
   document.getElementById('clearBtn').addEventListener('click', clearForm);
-  document.getElementById('tempInput').addEventListener('keyup', keypress);
+  document.getElementById('wholeThing').addEventListener('keyup', keypress);
   };
 
 const init = () => {
