@@ -21,20 +21,22 @@ const determineConverter = (e) => {
     if (document.getElementById('celsius').checked) {
         tempType = 'Celsius';
         newTemp = toFahrenheit(temp);
-        domString += `<div class=`;
+        //the portion below adds a class in order to appropriately color code the output temperature
+        domString += `<div id = "outputValue" class=`;
           if (newTemp <= 32) {
             domString += `"freezing"`;
           } else if (newTemp >= 90) {
             domString += `"hot"`;
           }
           else domString += `"temperate"`;
+
         domString += `><h2>${newTemp} degrees F</h2>`
         domString += `</div>`
       }
     else if (document.getElementById('fahrenheit').checked) {
         tempType = 'Fahrenheit';
         newTemp = toCelsius(temp);
-        domString += `<div class=`;
+        domString += `<div id = "outputValue" class=`;
         if (newTemp <= 0) {
           domString += `"freezing"`;
         } else if (newTemp >= 32) {
@@ -51,10 +53,11 @@ const determineConverter = (e) => {
 //The function below runs when the clear button is clicked and makes the input field contain an empty string
 const clearForm = (e) => {
   e.preventDefault();
-  document.getElementById('tempOutput').value = "";
+  const cleared = ``;
+  printToDom('outputValue', cleared);
   document.getElementById('tempInput').value = "";
 };
-
+//the function below does the same thing when you press the return key as would happen when you clicked the convert button
 const keypress = () => {
   if (event.keyCode === 13) {
     event.preventDefault();
