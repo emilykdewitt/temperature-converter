@@ -53,3 +53,15 @@ body {
 .tempConverterForm, .tempResults {
     margin-top: 40px;
 }
+
+.freezing {
+    color: blue;
+}
+
+.hot {
+    color: red;
+}
+
+.temperate {
+    color: green;
+}

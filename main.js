@@ -21,12 +21,28 @@ const determineConverter = (e) => {
     if (document.getElementById('celsius').checked) {
         tempType = 'Celsius';
         newTemp = toFahrenheit(temp);
-        domString += `<h2>${newTemp} degrees F</h2>`
+        domString += `<div class=`;
+          if (newTemp <= 32) {
+            domString += `"freezing"`;
+          } else if (newTemp >= 90) {
+            domString += `"hot"`;
+          }
+          else domString += `"temperate"`;
+        domString += `><h2>${newTemp} degrees F</h2>`
+        domString += `</div>`
       }
     else if (document.getElementById('fahrenheit').checked) {
         tempType = 'Fahrenheit';
         newTemp = toCelsius(temp);
-        domString += `<h2>${newTemp} degrees C</h2>`;
+        domString += `<div class=`;
+        if (newTemp <= 0) {
+          domString += `"freezing"`;
+        } else if (newTemp >= 32) {
+          domString += `"hot"`;
+        }
+        else domString += `"temperate"`;
+        domString += `><h2>${newTemp} degrees C</h2>`;
+        domString += `</div>`
     }
     console.log(domString);
     printToDom('tempOutput', domString);
