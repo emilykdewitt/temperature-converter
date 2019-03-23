@@ -8,21 +8,28 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <form>
+    <form class="mainContainer">
         <div class="tempConverterForm">
             <h3>Temperature to Convert:</h3>
             <input id="tempInput" name="tempInput">
+            <div class="radio-buttons">
+                <div class="celsiusButton">
+                    <input type="radio" name="tempType" id="celsius" value="C"> Celsius</input>
+                </div>
+                <div class="fahrenheitButton">
+                    <input type="radio" name="tempType" id="fahrenheit" value="F">Fahrenheit</input>
+                </div>
+            </div>
         </div>
-        <div class="radio-buttons"></div>
-            <input type="radio" name="tempType" id="celsius" value="C"> Celsius
-            <input type="radio" name="tempType" id="fahrenheit" value="F">Fahrenheit
-        </div>
-    </form>
         <div class="action-buttons">
-            <input type="reset" value="Clear">
+            <button id="clearBtn">Clear</button>
             <button id="convertBtn">Convert</button>
-            <div id="tempOutput" class="output-temp"></div>        
         </div>
+        <div class="tempResults">
+            <h3>Converted Temperature:</h3>
+            <div id="tempOutput" class="output-temp"></div>      
+        </div>  
+    </form>
     <script src="./main.js"></script>
 </body>
 </html>
