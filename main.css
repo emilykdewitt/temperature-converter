@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: lightcyan;
+    background-color: whitesmoke;
 }
 
 .mainContainer {
@@ -34,11 +34,21 @@ body {
 }
 
 #tempInput {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+    padding: 2px;
     width: 250px;
     height: 40px;
     background-color: white;
     color: black;
     border: 2px black solid;
+}
+#tempOutput {
+    display: flex;
+    align-content: center;
+    text-align: center;
 }
 
 .output-temp {
@@ -48,6 +58,11 @@ body {
     background-color: white;
     text-align: center;
     align-content: center;
+}
+
+#outputValue {
+    text-align: center;
+    align-items: stretch;
 }
 
 .tempConverterForm, .tempResults {
